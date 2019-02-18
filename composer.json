@@ -1,6 +1,6 @@
 {
-    "name": "iio/libmergepdf",
-    "description": "Library for merging multiple PDFs",
+    "name": "blendisnl/libmergepdf",
+    "description": "Library for merging multiple PDFs without ambiguous FPDF issues",
     "keywords": ["pdf", "merge"],
     "homepage": "https://github.com/hanneskod/libmergepdf",
     "type": "library",
@@ -9,17 +9,20 @@
         {
             "name": "Hannes Forsgård",
             "email": "hannes.forsgard@fripost.org"
+        },
+        {
+            "name": "Wessel Stam",
+            "email": "wessel@blendis.nl"
         }
     ],
     "autoload": {
         "psr-4": {
-            "iio\\libmergepdf\\": "src/"
+            "blendisnl\\libmergepdf\\": "src/"
         }
     },
     "require": {
         "php": "^7.1",
-        "setasign/fpdi-tcpdf": "^2.0",
-        "rafikhaceb/tcpdi": "^1"
+        "setasign/fpdi-tcpdf": "^2.0"
     },
     "require-dev": {
         "smalot/pdfparser": "~0.13"

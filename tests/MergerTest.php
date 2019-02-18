@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf;
+namespace blendisnl\libmergepdf;
 
-use iio\libmergepdf\Driver\DriverInterface;
-use iio\libmergepdf\Source\FileSource;
-use iio\libmergepdf\Source\RawSource;
+use blendisnl\libmergepdf\Driver\DriverInterface;
+use blendisnl\libmergepdf\Source\FileSource;
+use blendisnl\libmergepdf\Source\RawSource;
 
 class MergerTest extends \PHPUnit\Framework\TestCase
 {

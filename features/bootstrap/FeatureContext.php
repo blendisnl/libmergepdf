@@ -6,8 +6,8 @@ use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Behat\Tester\Exception\PendingException;
-use iio\libmergepdf\Merger;
-use iio\libmergepdf\Pages;
+use blendisnl\libmergepdf\Merger;
+use blendisnl\libmergepdf\Pages;
 use Smalot\PdfParser\Parser as PdfParser;
 
 final class FeatureContext implements Context
@@ -27,7 +27,7 @@ final class FeatureContext implements Context
      */
     public function theDriver(string $driver)
     {
-        $driverClass = "iio\libmergepdf\Driver\\$driver";
+        $driverClass = "blendisnl\libmergepdf\Driver\\$driver";
         $this->merger = new Merger(new $driverClass);
     }
 

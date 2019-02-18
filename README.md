@@ -11,7 +11,7 @@ PHP library for merging multiple PDFs.
 Install using [composer](http://getcomposer.org/).
 
 ```shell
-composer require iio/libmergepdf:^4.0
+composer require blendisnl/libmergepdf:^4.0
 ```
 
 ## Usage
@@ -19,8 +19,8 @@ composer require iio/libmergepdf:^4.0
 Append the first ten pages of **bar.pdf** to **foo.pdf**:
 
 ```php
-use iio\libmergepdf\Merger;
-use iio\libmergepdf\Pages;
+use blendisnl\libmergepdf\Merger;
+use blendisnl\libmergepdf\Pages;
 
 $merger = new Merger;
 $merger->addFile('foo.pdf');
@@ -31,7 +31,7 @@ $createdPdf = $merger->merge();
 Bulk add files from an iterator:
 
 ```php
-use iio\libmergepdf\Merger;
+use blendisnl\libmergepdf\Merger;
 
 $merger = new Merger;
 $merger->addIterator(['A.pdf', 'B.pdf']);
@@ -44,8 +44,8 @@ The default `FPDI` driver is not able handle compressed pdfs of version 1.5 or l
 Circumvent this limitation by using the slightly more experimental `TCPDI` driver.
 
 ```php
-use iio\libmergepdf\Merger;
-use iio\libmergepdf\Driver\TcpdiDriver;
+use blendisnl\libmergepdf\Merger;
+use blendisnl\libmergepdf\Driver\TcpdiDriver;
 
 $merger = new Merger(new TcpdiDriver);
 ```
@@ -55,9 +55,9 @@ $merger = new Merger(new TcpdiDriver);
 Immutability may be achieved by using a `driver` directly.
 
 ```php
-use iio\libmergepdf\Driver\Fpdi2Driver;
-use iio\libmergepdf\Source\FileSource;
-use iio\libmergepdf\Pages;
+use blendisnl\libmergepdf\Driver\Fpdi2Driver;
+use blendisnl\libmergepdf\Source\FileSource;
+use blendisnl\libmergepdf\Pages;
 
 $merger = new Fpdi2Driver;
 

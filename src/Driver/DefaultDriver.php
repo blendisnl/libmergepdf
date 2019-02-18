@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Driver;
+namespace blendisnl\libmergepdf\Driver;
 
-use iio\libmergepdf\Source\SourceInterface;
+use blendisnl\libmergepdf\Source\SourceInterface;
 
 final class DefaultDriver implements DriverInterface
 {

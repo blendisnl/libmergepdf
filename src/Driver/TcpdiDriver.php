@@ -2,24 +2,28 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Driver;
+namespace blendisnl\libmergepdf\Driver;
 
-use iio\libmergepdf\Exception;
-use iio\libmergepdf\Source\SourceInterface;
+use blendisnl\libmergepdf\Exception;
+use blendisnl\libmergepdf\Source\SourceInterface;
+use blendisnl\libmergepdf\Tcpdi\Tcpdi;
 
+/**
+ *
+ */
 final class TcpdiDriver implements DriverInterface
 {
     /**
-     * @var \TCPDI
+     * @var Tcpdi
      */
     private $tcpdi;
 
-    public function __construct(\TCPDI $tcpdi = null)
+    public function __construct(Tcpdi $tcpdi = null)
     {
         // TODO A stupid hack to hide deprecation notice
         @each($arr = []);
 
-        $this->tcpdi = $tcpdi ?: new \TCPDI;
+        $this->tcpdi = $tcpdi ?: new Tcpdi;
     }
 
     public function merge(SourceInterface ...$sources): string

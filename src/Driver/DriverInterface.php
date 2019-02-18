@@ -1,8 +1,8 @@
 <?php
 
-namespace iio\libmergepdf\Driver;
+namespace blendisnl\libmergepdf\Driver;
 
-use iio\libmergepdf\Source\SourceInterface;
+use blendisnl\libmergepdf\Source\SourceInterface;
 
 interface DriverInterface
 {

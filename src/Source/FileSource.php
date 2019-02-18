@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Source;
+namespace blendisnl\libmergepdf\Source;
 
-use iio\libmergepdf\PagesInterface;
-use iio\libmergepdf\Pages;
-use iio\libmergepdf\Exception;
+use blendisnl\libmergepdf\PagesInterface;
+use blendisnl\libmergepdf\Pages;
+use blendisnl\libmergepdf\Exception;
 
 /**
  * Pdf source from file

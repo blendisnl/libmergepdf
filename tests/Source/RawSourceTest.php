@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-namespace iio\libmergepdf\Source;
+namespace blendisnl\libmergepdf\Source;
 
-use iio\libmergepdf\PagesInterface;
+use blendisnl\libmergepdf\PagesInterface;
 
 class RawSourceTest extends \PHPUnit\Framework\TestCase
 {
