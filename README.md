@@ -11,7 +11,7 @@ PHP library for merging multiple PDFs.
 Install using [composer](http://getcomposer.org/).
 
 ```shell
-composer require blendisnl/libmergepdf:^4.0
+composer require blendisnl/libmergepdf:^4.1
 ```
 
 ## Usage
