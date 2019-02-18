@@ -22,7 +22,7 @@ namespace blendisnl\libmergepdf\Tcpdi;
 ////  limitations under the License.
 ////
 //
-use App\Pripost\Customer\Signup\Services\PdfMerger\TcpdiParser;
+use blendisnl\libmergepdf\Tcpdi\TcipdiParser;
 
 /**
  * @author Wessel Stam <wessel@blendis.nl>
@@ -122,7 +122,7 @@ class Tcpdi extends FpdfTpl {
         $this->current_filename = $filename;
 
         if (!isset($this->parsers[$filename]))
-            $this->parsers[$filename] = new TcpdiParser($pdfdata, $filename);
+            $this->parsers[$filename] = new TcipdiParser($pdfdata, $filename);
         $this->current_parser =& $this->parsers[$filename];
         $this->setPDFVersion(max($this->getPDFVersion(), $this->current_parser->getPDFVersion()));
 
@@ -137,7 +137,7 @@ class Tcpdi extends FpdfTpl {
      */
     protected function _getPdfParser($filename) {
         $data = file_get_contents($filename);
-        return new TcpdiParser($data, $filename);
+        return new TcipdiParser($data, $filename);
     }
 
     /**
