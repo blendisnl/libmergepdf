@@ -7,12 +7,13 @@ namespace blendisnl\libmergepdf\Driver;
 use blendisnl\libmergepdf\Source\SourceInterface;
 use blendisnl\libmergepdf\Exception;
 use blendisnl\libmergepdf\Pages;
+use blendisnl\libmergepdf\Tcpdi\Tcpdi;
 
 class TcpdiDriverTest extends \PHPUnit\Framework\TestCase
 {
     public function testExceptionOnFailure()
     {
-        $tcpdi = $this->prophesize(\TCPDI::CLASS);
+        $tcpdi = $this->prophesize(Tcpdi::CLASS);
         $tcpdi->setSourceData('foobar')->willThrow(new \Exception('message'));
 
         $source = $this->prophesize(SourceInterface::CLASS);
@@ -27,7 +28,7 @@ class TcpdiDriverTest extends \PHPUnit\Framework\TestCase
 
     public function testMerge()
     {
-        $tcpdi = $this->prophesize(\TCPDI::CLASS);
+        $tcpdi = $this->prophesize(Tcpdi::CLASS);
 
         $tcpdi->setSourceData('data')->willReturn(2);
 

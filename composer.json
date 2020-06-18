@@ -22,7 +22,8 @@
     },
     "require": {
         "php": "^7.1",
-        "setasign/fpdi-tcpdf": "^2.0"
+        "setasign/fpdf": "^1.8.2",
+        "setasign/fpdi": "^2.3"
     },
     "require-dev": {
         "smalot/pdfparser": "~0.13"
